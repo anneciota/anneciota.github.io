@@ -81,6 +81,6 @@ img[src*=anne] {
 
 @media (max-width: 800px) {
   img[src*=anne] {
-    height: 75px;
+    height: 100px;
   }
 }
