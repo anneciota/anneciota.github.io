@@ -80,7 +80,8 @@ img[src*=anne] {
 }
 
 @media (max-width: 600px) {
-  img[src*=anne] { {
+  img[src*=anne] {
     height: 20px;
+    border: 1px solid red;
   }
 }
