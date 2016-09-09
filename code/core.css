@@ -13,7 +13,7 @@ h1 {
 h2 {
   font-family: Cookie, serif;
   font-size: 5vw;
-  padding-left: 10vw;
+  padding: 20px 0 0 10vw;
 }
 
 p {
