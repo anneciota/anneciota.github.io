@@ -79,7 +79,7 @@ img[src*=anne] {
   border: 1px solid gray;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 800px) {
 
   div#menu {
     font-size: 3vw;
