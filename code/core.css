@@ -82,11 +82,11 @@ img[src*=anne] {
 @media (max-width: 800px) {
 
   div#menu {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   div#menu > a {
-    padding: 0 4vw;
+    padding: 0 2vw;
     line-height: 10vw;
   }
 
