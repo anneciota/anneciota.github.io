@@ -39,7 +39,7 @@ div#menu > a {
   line-height: 60px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 799px) {
   div#menu {
     display: none;
   }
