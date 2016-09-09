@@ -78,3 +78,9 @@ img[src*=anne] {
   height: 15vw;
   border: 1px solid gray;
 }
+
+@media (max-width: 600px) {
+  img[src*=anne] { {
+    height: 5vw;
+  }
+}
