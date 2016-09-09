@@ -76,7 +76,7 @@ img[src*=anne] {
   float: left;
   max-height: 300px;
   height: 15vw;
-  border: 1px solid gray;
+  border: 1px solid #222;
 }
 
 @media (max-width: 800px) {
