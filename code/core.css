@@ -28,8 +28,7 @@ p {
 }
 
 p#quote {
-  font-family: Cookie, serif;
-  font-size: 4vw;
+  font-size: 2vw;
   padding: 20px 0 0 15vw;
   text-align: left;
   font-weight: bold;
