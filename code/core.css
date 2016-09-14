@@ -28,7 +28,7 @@ p {
 }
 
 p#quote {
-  padding: 20px 30vw 0 11vw;
+  padding: 20px 0 0 25vw;
   text-align: left;
   font-weight: bold;
   font-style: italic;
