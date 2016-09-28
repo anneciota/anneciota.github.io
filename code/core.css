@@ -35,7 +35,7 @@ p#quote {
   text-align: center;
 }
 
-p#indent {
+p.indent {
   padding-left: 12vw;
 }
 
