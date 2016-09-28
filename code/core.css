@@ -35,10 +35,6 @@ p#quote {
   text-align: center;
 }
 
-p.indent {
-  padding-left: 12vw;
-}
-
 div#menu {
   position: fixed;
   top: 0;
