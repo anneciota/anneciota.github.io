@@ -1,103 +1,640 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="AnneCiotaApp">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Anne Ciota</title>
-
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- font awesome icons -->
-    <script src="https://use.fontawesome.com/bb2dc4020b.js"></script>
-
-    <!-- custom fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-
-    <!-- local code -->
-    <script src="code/app.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anne Ciota - Transform your life with Dream Builder Coaching and Energy Psychology. Schedule your free Discovery Call today.">
+    <title>Anne Ciota | Dream Builder Coaching & Energy Psychology</title>
+    
     <link rel="stylesheet" href="code/core.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#fcfbf9">
+</head>
+<body class="font-body text-text bg-bg text-base leading-relaxed">
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-lg z-50 border-b border-black/5 transition-all duration-300">
+        <div class="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Brand -->
+            <a href="#hero" class="font-heading text-3xl font-bold text-primary tracking-tight hover:opacity-80 transition-opacity">Anne Ciota</a>
+            
+            <!-- Mobile menu toggle -->
+            <div class="lg:hidden flex flex-col gap-1.5 cursor-pointer p-2 rounded-md hover:bg-black/5 transition-colors" id="mobile-menu" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span class="w-6 h-[2px] bg-text transition-all duration-300 origin-center"></span>
+                <span class="w-6 h-[2px] bg-text transition-all duration-300 origin-center"></span>
+                <span class="w-6 h-[2px] bg-text transition-all duration-300 origin-center"></span>
+            </div>
+            
+            <!-- Desktop Links -->
+            <ul class="hidden lg:flex items-center gap-8 list-none" id="nav-links">
+                <li><a href="#dreambuilder" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Dream Builder</a></li>
+                <li><a href="#about" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">About</a></li>
+                <li><a href="#coaching" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Coaching</a></li>
+                <li><a href="#energy-psychology" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Energy</a></li>
+                <li><a href="#certifications" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Certifications</a></li>
+                <li><a href="#testimonials" class="relative text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Testimonials</a></li>
+                <li><a href="#" class="open-contact-modal px-6 py-2.5 bg-primary text-white text-[13px] font-bold uppercase tracking-widest rounded-full shadow-md hover:bg-[#6d4b34] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Dropdown -->
+        <ul class="flex flex-col absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg py-6 shadow-2xl text-center border-t border-black/5 transition-all duration-300 ease-in-out opacity-0 pointer-events-none -translate-y-4" id="mobile-nav-links">
+            <li class="py-3"><a href="#dreambuilder" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">Dream Builder</a></li>
+            <li class="py-3"><a href="#about" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">About</a></li>
+            <li class="py-3"><a href="#coaching" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">Coaching</a></li>
+            <li class="py-3"><a href="#energy-psychology" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">Energy Psychology</a></li>
+            <li class="py-3"><a href="#certifications" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">Certifications</a></li>
+            <li class="py-3"><a href="#testimonials" class="text-[13px] font-bold uppercase tracking-widest text-text hover:text-primary transition-colors">Testimonials</a></li>
+            <li class="py-5"><a href="#" class="open-contact-modal inline-block px-8 py-3 bg-primary text-white text-[13px] font-bold uppercase tracking-widest rounded-full shadow-md hover:bg-[#6d4b34] transition-colors">Contact</a></li>
+        </ul>
+    </nav>
 
-  </head>
-  <body>
-    <div id="menu">
-      <a href="#meet">MEET ANNE</a>
-      <a href="#approach">APPROACH</a>
-      <a href="#testimonials">TESTIMONIALS</a>
-      <a href="#contact">CONTACT</a>
+    <!-- Hero Section -->
+    <header id="hero" class="h-screen min-h-[600px] flex items-center justify-center text-center bg-[linear-gradient(rgba(252,251,249,0.85),rgba(252,251,249,0.95)),url('../img/sunset.jpg')] bg-center bg-cover bg-no-repeat pt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <div class="max-w-3xl mx-auto animate-[fadeIn_1s_ease-out]">
+                <span class="text-lg uppercase tracking-widest text-secondary block mb-4">Transform Your Life</span>
+                <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-primary mb-6 leading-tight">Create a Life You Love Living</h1>
+                <p class="text-lg md:text-xl text-text-light mb-10">Experience a powerful 12-week process of transformation with Dream Builder Coaching, supported by over 30 years of therapeutic and energy psychology expertise.</p>
+                <a href="#" class="open-contact-modal inline-block bg-primary text-white py-4 px-8 rounded font-semibold uppercase tracking-wide text-sm shadow-md hover:bg-[#6d4b34] hover:-translate-y-0.5 transition-all">Schedule a Discovery Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dream Builder Program -->
+    <section id="dreambuilder" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary mb-6">Dream Builder Program</h2>
+                <p class="text-xl text-text">Welcome to my website. I am now offering something totally new which I am super excited about. It is the Dream Builder Program, a powerful 12 week process of transformation.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <blockquote class="font-heading text-2xl md:text-3xl italic text-primary mb-4">“When we say to the Universe, that we are willing to make a shift, and we say it with conviction, we can then watch with awe as our lives begin to unfold in directions and ways we could not have imagined.”</blockquote>
+                <cite class="font-semibold text-text-light not-italic">&mdash; Mary Morrissey</cite>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <h3 class="font-heading text-2xl md:text-3xl font-semibold text-primary text-center mb-6">Accelerate Your Results, and Create a Life You Love Living!</h3>
+                <p class="text-lg text-text text-center mb-6">Imagine – a simple system for discovering what your dream is AND the confidence you need to go after it with joy and inner peace.</p>
+                <p class="text-lg text-text text-center mb-12">In this PROVEN, 90-day process for transforming your life and jumpstarting the results you want to see, you will learn to live the life you want AND enjoy the fulfillment of building your dreams.</p>
+                
+                <h4 class="font-heading text-xl md:text-2xl font-semibold text-primary text-center mb-8">In this program you will receive:</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-bg p-8 rounded-lg border-t-4 border-primary shadow-sm">
+                        <h4 class="font-heading text-xl font-semibold text-primary mb-4">Gaining Clarity</h4>
+                        <p class="text-text-light">The Complete System for Gaining Clarity On Your Dream and the next steps you can take so that you can experience a greater flow of abundance in your life.</p>
+                    </div>
+                    <div class="bg-bg p-8 rounded-lg border-t-4 border-primary shadow-sm">
+                        <h4 class="font-heading text-xl font-semibold text-primary mb-4">Private Coaching</h4>
+                        <p class="text-text-light">12 LIVE Private Coaching Sessions where you will get support, motivation, and the answers to your most burning dream building questions.</p>
+                    </div>
+                    <div class="bg-bg p-8 rounded-lg border-t-4 border-primary shadow-sm">
+                        <h4 class="font-heading text-xl font-semibold text-primary mb-4">Proven System</h4>
+                        <p class="text-text-light">The PROVEN DreamBuilder® Program complete with Guidebook with MP3 audio teaching & meditation files to help stay connected to your highest potential and accelerate your results.</p>
+                    </div>
+                    <div class="bg-bg p-8 rounded-lg border-t-4 border-primary shadow-sm">
+                        <h4 class="font-heading text-xl font-semibold text-primary mb-4">Joy & Confidence</h4>
+                        <p class="text-text-light">More Joy, Self-worth and Confidence In Your Life as you master the spiritual side of success – in every way (from finances to health and relationships).</p>
+                    </div>
+                </div>
+
+                <p class="max-w-2xl mx-auto text-center text-xl font-semibold text-secondary mb-16">Some people live 99 years, but MOST people live 1 year 99 times. Invest in yourself. Invest in your dreams. This is YOUR time to create a life you LOVE living! It’s the best investment anyone can make.</p>
+
+                <h4 class="font-heading text-xl md:text-2xl font-semibold text-primary text-center mb-8">What others are saying about the DreamBuilder® Program...</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“I now have more than one avenue of income doing work I really enjoy.”</p>
+                        <span class="font-semibold text-primary text-sm">– Judy Steward, Lake Forest, CA</span>
+                    </div>
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“The DreamBuilder® program had everything I was looking for and more!”</p>
+                        <span class="font-semibold text-primary text-sm">– Ann Boreman, Phoenix, AZ</span>
+                    </div>
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“DreamBuilder® is more than worth the investment in yourself.”</p>
+                        <span class="font-semibold text-primary text-sm">– Peter Calabrese, San Francisco, CA</span>
+                    </div>
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“DreamBuilder® is a wonderful step to creating the life you want to live!”</p>
+                        <span class="font-semibold text-primary text-sm">– Tammy Braswell, Ann Arbor, MI</span>
+                    </div>
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“This program has been one the best decisions I’ve ever made.”</p>
+                        <span class="font-semibold text-primary text-sm">– Arturo Ovies, Puerto Vallarta, Mexico</span>
+                    </div>
+                    <div class="bg-bg-alt p-6 rounded-md border-l-4 border-primary">
+                        <p class="italic text-[15px] mb-2 text-text">“I manifested the right home in the town I wanted to live...”</p>
+                        <span class="font-semibold text-primary text-sm">– Wendy Vitalich, El Segundo, CA</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="open-contact-modal inline-block bg-primary text-white py-4 px-8 rounded font-semibold uppercase tracking-wide text-sm shadow-md hover:bg-[#6d4b34] hover:-translate-y-0.5 transition-all">Schedule a Discovery Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Anne -->
+    <section id="about" class="py-24 bg-bg-alt scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Meet Anne</h2>
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-center">
+                <div class="max-w-[300px] mx-auto md:max-w-none">
+                    <img src="img/anne.png" alt="Anne Ciota" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <p class="text-text-light mb-6">If you choose to enroll in the Dream Builder Program, you will also benefit from the integration of my extensive training and experience. I have over 30 years of experience as a warm, compassionate, heart-centered therapist and over 20 years as an energy psychology practitioner.</p>
+                    <p class="text-text-light">As your coach or energy psychology practitioner, or a combination of both, my role is as your guide and facilitator.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaching for Transformation -->
+    <section id="coaching" class="py-24 bg-bg scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Coaching for Transformation</h2>
+            <div class="max-w-3xl mx-auto space-y-6 text-text-light">
+                <p>Coaching is a powerful way to change something in your life. Perhaps you are feeling stuck or trapped and unable to move forward and achieve your goals. A good question to ask yourself: What else is possible?</p>
+                <p>What keeps us stuck? Most often it is our subconscious minds which “run the show.” To move forward we need to identify and clear these self-sabotaging limiting beliefs. Some of the most common ones are: “I don’t deserve,” “I’m not enough,” “It’s not safe,” “I’m afraid to fail,” “I’m afraid to succeed,” and “I’m not worthy.”</p>
+                <p>Coaching enables you to transform your limiting beliefs, increase your confidence and, utilizing the Law of Attraction, become unstuck. We will work together to set goals and create what you desire. You can transform your life. I know this for certain: <strong class="font-semibold text-text">You are worth it!</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Psychology -->
+    <section id="energy-psychology" class="py-24 bg-bg-alt scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Energy Psychology</h2>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-text-light">Energy Psychology is a term which encompasses a variety of mind-body approaches. These powerful techniques decrease stress, clear limiting beliefs, release trauma and facilitate rapid positive change. The ones I use most often are listed below.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h4 class="font-heading text-xl font-semibold text-primary mb-4">EFT or Tapping</h4>
+                    <p class="text-text-light mb-4">Writes founder Gary Craig, “combines the physical benefits of acupuncture with the cognitive benefits of conventional therapy for a much faster, more complete treatment of emotional issues, and the physical and performance issues that often result.”</p>
+                    <p class="text-text-light">It has been called psychological acupuncture without needles. Research has shown that it shifts brain patterns that lead to unwanted thoughts, actions and emotions. It is used worldwide to relieve emotional and physical issues, and most of my clients would heartily agree that it is a terrific self-help tool.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h4 class="font-heading text-xl font-semibold text-primary mb-4">The Emotion Code</h4>
+                    <p class="text-text-light mb-4">According to Dr. Bradley Nelson, “has been created to give you new insight, to show you how trapped emotions can cause all kinds of problems, and give you the means to release them. You can take your life back, enjoy better health, and finally be free from the insidious and subtle forces that trapped emotions are exerting upon you.”</p>
+                    <p class="text-text-light">I have found that clearing a person’s “Heart Wall” can be extremely powerful, as it “blocks you in your ability to give and receive love freely, and it will create depression, numbness and a sense of isolation, and anxiety and self-sabotage. Because it blocks your creative abilities, it will also block you from success.”</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h4 class="font-heading text-xl font-semibold text-primary mb-4">TAT</h4>
+                    <p class="text-text-light mb-4">Developed by acupuncturist Tapas Fleming, “is a process which focuses the user on a series of statements while holding acupressure points that connect all physical, mental, emotional and spiritual parts of them.”</p>
+                    <p class="text-text-light">She also writes, “TAT helps to heal the emotional causes of trauma, physical illnesses, phobias, negative beliefs and negative patterns.” My clients almost always find it extremely relaxing to do TAT. Besides being a great de-stressor, it is a great tool to use to create the life you want to live.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <h4 class="font-heading text-xl font-semibold text-primary mb-4">SRT / Spiritual Response Technique</h4>
+                    <p class="text-text-light">Operating at a soul level, SRT is a powerful technique which releases negative energies and beliefs from current and past lives, and replaces them with positive ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-24 bg-bg scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Training and Certifications</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Certified EFT Practitioner</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Positive EFT</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Certified Emotion Code Practitioner</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">TAT Certified Professional and Trainer</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Certified SRT Practitioner</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Gentle Reprocessing Practitioner</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Thought Field Therapy, Levels I – IV</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Certified Personal Development Coach, Achieve Today</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">NLP Training</div>
+                <div class="bg-white p-6 rounded-md text-center font-semibold text-secondary shadow-sm border border-black/5">Shamballa Master</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-bg-alt scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Client Testimonials</h2>
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+                <!-- Using CSS multi-column layout for masonry effect on testimonials since they have varying lengths -->
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“Every coaching session I had with Anne was great! Anne gave me the tools I needed to clear out limiting beliefs and the opportunity to gain insight, clarity and direction in my life. I felt very connected, and her fun-loving yet firm style of delivery enabled me to keep on track and feel more empowered after each session. She made me laugh and take notice that playing small doesn’t serve anyone or anything! I truly recommend her to anyone ready (and maybe even not so ready) to move forward and embrace positive changes in his/her life.”</p>
+                    <span class="font-semibold text-primary block">– Pam from Florida</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“I found Anne to be a very positive and motivating coach. I loved identifying and clearing my limiting beliefs and learning hands-on tools. As I considered retirement, she helped me feel confident about making my decision. She also helped me decrease my stress and anxiety about a long trip that I had planned.”</p>
+                    <span class="font-semibold text-primary block">– Kathy from New York</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“Anne is an incredibly giving and nurturing person… She is intuitive and insightful. I have grown so much since beginning my work with her. She has taught me so much about myself but, more importantly, she has given me tools to be able to heal emotionally from the hurts in my life. I now feel like I have the ongoing ability to deal with the challenges in my life.”</p>
+                    <span class="font-semibold text-primary block">– P.F., Massachusetts</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“Working with Anne was very helpful. In very quick fashion she helped me resolve an important and key issue. This is something I have tried to work on for a long time. I have no emotional charge around this now and feel this frees me up for moving on in many areas of my life.”</p>
+                    <span class="font-semibold text-primary block">– Connie in Connecticut</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“I am so thankful for the compassion, care, generosity, support, kindness and understanding you have shown me. You helped me through much of the darkness, despair and hopelessness that once consumed my life, and always gave me the needed encouragement and hope that healing was and is possible!! I have learned so much from you, in terms of using tools to heal and empower myself.”</p>
+                    <span class="font-semibold text-primary block">– Nina, age 25</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“I really felt better. I was thinking with a lot more clarity. It enabled me to know myself better and gave me a sense of well-being.”</p>
+                    <span class="font-semibold text-primary block">– J.K., age 50</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“It is great to have met you and I deeply appreciate the work we did together. I was looking for something to ‘move me off the spot’ in terms of addressing and releasing some emotional baggage. I truly wanted to better understand my thinking, motives and the ‘why’ of my behaviors. To see if there were patterns for me that I thought were protecting me, but in fact were actually inhibiting growth… Your approach, which includes other alternative modalities like EFT, TAT and the Emotion Code was exactly what I needed. It was interesting and I saw results immediately. It also allowed me to take away tools to use on my own. I felt wonderful, with a gift of insight and a practice for my continued exploration of me. Thank you for being part of my journey of self discovery.”</p>
+                    <span class="font-semibold text-primary block">– Nancy, New Hampshire</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“The work with Anne using the Emotion Code was profound and deeply healing. I highly recommend her and this technique.”</p>
+                    <span class="font-semibold text-primary block">– Sue, age 45</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“Using The Emotion Code has been, literally, transformational for me. In my first session of the Emotion Code, anxiety and stress melted away effortlessly. I was astounded that healing could occur so gently and so quickly… Additional Emotion Code sessions have lifted depression, swept away grief, and erased fear. I am experiencing happiness, improved health, and for the first time in a very long time, I look forward to each day with joyful anticipation.”</p>
+                    <span class="font-semibold text-primary block">– Anne, age 59</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“Tapas Acupressure Therapy (TAT) is like a breath of fresh air. I appreciate the gentle ease of the technique. I am in awe of the instantaneous effectiveness of TAT. With each session I emerge more joyful and I feel a strong, fresh renewal of self. My life has changed dramatically in a positive direction… I feel a freedom and excitement for life that I haven’t felt since I was a child.”</p>
+                    <span class="font-semibold text-primary block">– Diane, New Hampshire</span>
+                </div>
+                <div class="break-inside-avoid bg-white p-10 rounded-lg shadow-sm relative">
+                    <span class="font-heading text-6xl text-primary-light/30 absolute top-4 left-6">"</span>
+                    <p class="italic text-text-light mb-6 relative z-10">“After the SRT session I'm more open and things are shifting in all of my relationships.”</p>
+                    <span class="font-semibold text-primary block">– S.K., age 46</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-bg scroll-mt-20">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Contact</h2>
+            <div class="max-w-xl mx-auto text-center">
+                <p class="text-text-light mb-4">I work with clients throughout the United States and worldwide via telephone and Zoom.</p>
+                <p class="text-text-light mb-12">Please call me for a free consultation if you would like to know more about coaching or energy healing and how you might benefit. This also gives you an opportunity to see if we would be a “good fit.”</p>
+                
+                <div class="flex flex-col gap-6 text-xl">
+                    <a href="tel:9789602006" class="inline-flex items-center justify-center gap-3 text-text font-semibold hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        978-960-2006
+                    </a>
+                    <a href="mailto:anneciota@gmail.com" class="inline-flex items-center justify-center gap-3 text-text font-semibold hover:text-primary transition-colors">
+                        <svg class="w-6 h-6 fill-primary" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        anneciota@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text text-white text-center py-12">
+        <div class="max-w-[1100px] mx-auto px-8">
+            <p class="font-heading italic text-2xl mb-4 text-bg-alt">“Whatever you vividly imagine, ardently desire, sincerely believe, and enthusiastically act upon must inevitably come to pass.”</p>
+            <p class="text-white">&mdash; Paul J. Meyer</p>
+            <p class="mt-8 text-sm text-[#aaaaaa]">&copy; <script>document.write(new Date().getFullYear())</script> Anne Ciota. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-[#6d4b34] hover:-translate-y-1 transition-all duration-300 opacity-0 pointer-events-none z-50" aria-label="Back to top">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </button>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl p-8 md:p-10 relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto" id="contact-modal-content">
+            <button id="close-modal" class="absolute top-6 right-6 text-text-light hover:text-text transition-colors p-2 rounded-full hover:bg-black/5" aria-label="Close modal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3 class="font-heading text-2xl font-bold text-primary">Initiate a Conversation</h3>
+                </div>
+                <p class="text-sm text-text-light">Confidential &bull; I will get back to you within 24-48 hours</p>
+            </div>
+
+            <form id="contact-form" class="space-y-6">
+                <!-- FormSubmit Configuration Inputs -->
+                <input type="hidden" name="_subject" value="New Contact Request from EmbodyingYourTruth">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-text mb-2">Full Name</label>
+                        <input type="text" name="Full_Name" class="w-full bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="e.g., Sarah Thompson" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text mb-2">Email Address</label>
+                        <input type="email" name="Email_Address" class="w-full bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="e.g., sarah.thompson@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-text mb-2">Phone Number</label>
+                        <input type="tel" name="Phone_Number" class="w-full bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="e.g., (310) 555-0198">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-text mb-2">Interested In</label>
+                        <select id="interest-select" name="Interested_In" class="w-full bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none cursor-pointer">
+                            <option value="Dream Builder Coaching">Dream Builder Coaching</option>
+                            <option value="Energy Psychology">Energy Psychology</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="other">Other (Please specify)</option>
+                        </select>
+                        <input type="text" id="custom-interest" name="Custom_Interest_Details" class="w-full mt-3 bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors hidden" placeholder="E.g., Speaking engagement, Group workshop, etc.">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-text mb-2">How can I help you?</label>
+                    <textarea name="Message" class="w-full bg-bg-alt border border-black/10 rounded-lg px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors h-32 resize-none" placeholder="Please share a little bit about what brings you here and how I can support your journey..." required></textarea>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-black/5">
+                    <button type="button" id="cancel-modal" class="px-6 py-2.5 text-sm font-bold text-text-light hover:text-text transition-colors">Cancel</button>
+                    <button type="submit" class="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white text-sm font-bold uppercase tracking-widest rounded-full shadow-md hover:bg-[#6d4b34] transition-colors group">
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div id="splash">
-      <h1>Anne Ciota</h1>
-      <span><a href="#meet">Personal Development</a> | <a href="#approach">Coaching</a> | <a href="#approach">Energy Healing</a></span>
-      <br>
-      <a href="#meet"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl p-8 md:p-10 text-center relative transform scale-95 transition-transform duration-300" id="success-modal-content">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-primary mb-3">Message Sent Successfully!</h3>
+            <p class="text-text-light mb-8" id="success-message-text">Thank you for reaching out. I'll get back to you within 24-48 hours.</p>
+            <button id="close-success-modal" class="w-full py-3 bg-primary text-white text-sm font-bold uppercase tracking-widest rounded-full shadow-md hover:bg-[#6d4b34] transition-colors">Done</button>
+        </div>
     </div>
 
-    <h2 id="meet">Meet Anne</h2>
-    <div ng-include="'text/MeetAnne'">
-    </div>
-    <hr>
-
-    <h2 id="approach">Approach</h2>
-    <div ng-include="'text/Approach'">
-    </div>
-    <hr>
-
-    <h2 id="testimonials">Testimonials</h2>
-    <div ng-include="'text/Testimonials'">
-    </div>
-    <hr>
-
-    <h2 id="contact">Contact</h2>
-    <div ng-include="'text/Contact'">
-    </div>
-
-    <br><br><br><br><br>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <!-- JavaScript for Mobile Menu & Smooth Scroll -->
     <script>
-    		$(document).on('click', 'a', function(event){
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinksMobile = document.getElementById('mobile-nav-links');
+        const spans = menuToggle.querySelectorAll('span');
 
-    			var url = $.attr(this, 'href');
+        function toggleMenu() {
+            // Toggle dropdown visibility and slide animation
+            navLinksMobile.classList.toggle('opacity-0');
+            navLinksMobile.classList.toggle('pointer-events-none');
+            navLinksMobile.classList.toggle('-translate-y-4');
+            navLinksMobile.classList.toggle('opacity-100');
+            navLinksMobile.classList.toggle('pointer-events-auto');
+            navLinksMobile.classList.toggle('translate-y-0');
 
-    			if(url && url.indexOf('#') >= 0) {
-    				event.preventDefault();
+            // Toggle hamburger into an "X"
+            spans[0].classList.toggle('rotate-45');
+            spans[0].classList.toggle('translate-y-[8px]');
+            spans[1].classList.toggle('opacity-0');
+            spans[2].classList.toggle('-rotate-45');
+            spans[2].classList.toggle('-translate-y-[8px]');
+        }
 
-  					$('html, body').animate({
-  						scrollTop: $(url).offset().top - 55
-  					}, 500);
-    			}
-    		});
-    	</script>
+        menuToggle.addEventListener('click', toggleMenu);
 
-  </body>
+        menuToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Close mobile menu on link click
+        navLinksMobile.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksMobile.classList.contains('opacity-100')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Reliable Smooth Scrolling with JS
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    // Manually calculate the offset to account for the fixed header
+                    const headerOffset = 80; // approximate height of the fixed nav
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+                    window.scrollTo({
+                         top: offsetPosition,
+                         behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            // Navbar shadow
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+
+            // Back to top button visibility
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                backToTop.classList.add('opacity-100', 'pointer-events-auto');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+                backToTop.classList.remove('opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        // Back to top click handler
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Contact Modal Logic
+        const contactModal = document.getElementById('contact-modal');
+        const contactModalContent = document.getElementById('contact-modal-content');
+        const closeModalBtns = document.querySelectorAll('#close-modal, #cancel-modal');
+        const openModalBtns = document.querySelectorAll('.open-contact-modal');
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+        function openContactModal(e) {
+            e.preventDefault();
+            contactModal.classList.remove('opacity-0', 'pointer-events-none');
+            contactModalContent.classList.remove('scale-95');
+            contactModalContent.classList.add('scale-100');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // If opened from mobile nav, ensure mobile nav closes
+            if (navLinksMobile.classList.contains('opacity-100')) {
+                toggleMenu();
+            }
+        }
+
+        function closeContactModal() {
+            contactModal.classList.add('opacity-0', 'pointer-events-none');
+            contactModalContent.classList.remove('scale-100');
+            contactModalContent.classList.add('scale-95');
+            document.body.style.overflow = '';
+        }
+
+        openModalBtns.forEach(btn => btn.addEventListener('click', openContactModal));
+        closeModalBtns.forEach(btn => btn.addEventListener('click', closeContactModal));
+        
+        // Close on backdrop click
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                closeContactModal();
+            }
+        });
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !contactModal.classList.contains('opacity-0')) {
+                closeContactModal();
+            }
+        });
+
+        // FormSubmit AJAX Integration
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            const formData = new FormData(contactForm);
+
+            fetch("https://formsubmit.co/ajax/anneciota@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Success: Personalize message
+                const userNameInput = contactForm.querySelector('input[name="Full_Name"]');
+                const userName = userNameInput && userNameInput.value ? userNameInput.value.split(' ')[0] : '';
+                const successText = document.getElementById('success-message-text');
+                
+                if (userName) {
+                    successText.innerHTML = `Thank you for reaching out, <strong>${userName}</strong>. I'll get back to you within 24-48 hours.`;
+                } else {
+                    successText.innerHTML = `Thank you for reaching out. I'll get back to you within 24-48 hours.`;
+                }
+
+                closeContactModal();
+                contactForm.reset();
+                
+                // Reset Custom Interest logic
+                customInterest.classList.add('hidden');
+                customInterest.removeAttribute('required');
+                
+                // Restore button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+
+                // Show success modal
+                openSuccessModal();
+            })
+            .catch(error => {
+                // Error
+                alert("Oops! There was a problem submitting your form. Please try again.");
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            });
+        });
+
+        // Success Modal Logic
+        const successModal = document.getElementById('success-modal');
+        const successModalContent = document.getElementById('success-modal-content');
+        const closeSuccessBtn = document.getElementById('close-success-modal');
+
+        function openSuccessModal() {
+            successModal.classList.remove('opacity-0', 'pointer-events-none');
+            successModalContent.classList.remove('scale-95');
+            successModalContent.classList.add('scale-100');
+        }
+
+        function closeSuccessModal() {
+            successModal.classList.add('opacity-0', 'pointer-events-none');
+            successModalContent.classList.remove('scale-100');
+            successModalContent.classList.add('scale-95');
+        }
+
+        closeSuccessBtn.addEventListener('click', closeSuccessModal);
+        
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                closeSuccessModal();
+            }
+        });
+
+        // Add Escape key logic for success modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !successModal.classList.contains('opacity-0')) {
+                closeSuccessModal();
+            }
+        });
+
+        // Custom "Other" option logic
+        const interestSelect = document.getElementById('interest-select');
+        const customInterest = document.getElementById('custom-interest');
+        
+        interestSelect.addEventListener('change', (e) => {
+            if (e.target.value === 'other') {
+                customInterest.classList.remove('hidden');
+                customInterest.focus();
+                customInterest.setAttribute('required', 'true');
+            } else {
+                customInterest.classList.add('hidden');
+                customInterest.removeAttribute('required');
+                customInterest.value = '';
+            }
+        });
+    </script>
+</body>
 </html>
