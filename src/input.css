@@ -9,22 +9,22 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #fcfbf9; 
+    background: #fcfcfc; 
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #d4a373; 
+    background: #699996; 
     border-radius: 6px;
-    border: 3px solid #fcfbf9; /* Creates a padded look */
+    border: 3px solid #fcfcfc; /* Creates a padded look */
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #8a6044; 
+    background: #3a6b68; 
   }
 
   /* Custom Scrollbar for Firefox */
   html {
     scrollbar-width: thin;
-    scrollbar-color: #d4a373 #fcfbf9;
+    scrollbar-color: #699996 #fcfcfc;
   }
 }

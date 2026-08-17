@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: '#fcfbf9',
-        'bg-alt': '#f4f1eb',
-        text: '#2d2d2d',
-        'text-light': '#555555',
-        primary: '#8a6044', // Warm terracotta
-        'primary-light': '#d4a373',
-        secondary: '#5d7052', // Sage green
-        accent: '#e9edc9',
+        bg: '#fcfcfc',
+        'bg-alt': '#f0f4f4',
+        text: '#1a2b2a',
+        'text-light': '#4a5d5c',
+        primary: '#3a6b68', // Muted deep teal/turquoise
+        'primary-light': '#699996',
+        secondary: '#889e9d', // Soft muted blue-gray
+        accent: '#e0ebea',
       },
       fontFamily: {
         heading: ['"Playfair Display"', 'serif'],
