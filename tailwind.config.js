@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         heading: ['"Playfair Display"', 'serif'],
         body: ['Inter', 'sans-serif'],
+        script: ['"Dancing Script"', 'cursive'],
       },
     },
   },
